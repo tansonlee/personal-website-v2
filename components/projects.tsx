@@ -45,7 +45,7 @@ const FooderProjectCard = () => {
 			<Text align='left'>
 				Fooder helps friend groups decide where to eat. Each person joins the room on their
 				device and accepts or declines restaurants. A list of restaurants that are
-				unanimously accepted is displayed to the group.
+				unanimously accepted is displayed to the group
 			</Text>
 			<Box textAlign='center'>
 				<LearnMoreButton />
