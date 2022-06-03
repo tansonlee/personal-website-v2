@@ -7,10 +7,10 @@ const About = () => {
 	return (
 		<Box id='about'>
 			<Heading mt='64px'>about me</Heading>
-			Hi, I'm Tanson. I'm a software engineer looking to create impact in all the work that I
-			do. I always want to learn from work or school or projects. My current interests are in
-			web3 and esoteric programming languages. Apart from engineering, I enjoy exporing nature
-			along with playing sports such as vollleyball and basketball.
+			Hi, I&apos;m Tanson. I&apos;m a software engineer looking to create impact in all the
+			work that I do. I always want to learn from work or school or projects. My current
+			interests are in web3 and esoteric programming languages. Apart from engineering, I
+			enjoy exporing nature along with playing sports such as vollleyball and basketball.
 			<Box mt={2}>
 				{/* University of Waterloo */}
 				<AboutMeSection
