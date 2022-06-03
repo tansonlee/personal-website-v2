@@ -22,7 +22,6 @@ const Navbar = () => {
 			<Flex alignItems='center' justifyContent='space-between' minW='40vw'>
 				<Link href='#about'>About</Link>
 				<Link href='#projects'>Projects</Link>
-				<Link href='#resume'>Resume</Link>
 				<Link href='#contact'>Contact</Link>
 				<Button onClick={toggleColorMode}>
 					{colorMode === 'light' ? <MdDarkMode /> : <MdLightMode />}

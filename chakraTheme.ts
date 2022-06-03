@@ -20,11 +20,29 @@ const colors = {
 		200: '',
 		300: '',
 	},
+	text: {
+		primary: '',
+		secondary: '#aaa',
+	},
 };
 
 const config = {
 	useSystemColorMode: false,
 	initialColorMode: 'dark',
+};
+
+const components = {
+	Text: {
+		variants: {
+			subtle: {
+				color: 'text.secondary',
+				fontStyle: 'italic',
+			},
+		},
+	},
+	Link: {
+		baseStyle: {},
+	},
 };
 
 const styles = {
@@ -35,6 +53,6 @@ const styles = {
 	}),
 };
 
-const theme = extendTheme({ colors, config, styles });
+const theme = extendTheme({ colors, config, styles, components });
 
 export default theme;

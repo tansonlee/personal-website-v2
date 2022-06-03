@@ -1,8 +1,9 @@
-import { Box, Flex, Heading, Icon, IconButton, Spacer, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, IconButton, Link, ResponsiveValue, Text } from '@chakra-ui/react';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
-import { AiOutlineMail, AiOutlineDown } from 'react-icons/ai';
-import { DownloadIcon } from '@chakra-ui/icons';
+import { AiOutlineMail } from 'react-icons/ai';
+import { CgFileDocument } from 'react-icons/cg';
 import { useRouter } from 'next/router';
+import SocialLinkIcon from './socialLinkIcon';
 
 const Hero = () => {
 	return (
@@ -23,25 +24,31 @@ const Hero = () => {
 const SocialLinks = () => {
 	return (
 		<Flex>
-			<SocialLinkIcon ariaLabel='Github link' icon={<BsGithub />} />
-			<SocialLinkIcon ariaLabel='Linkedin link' icon={<BsLinkedin />} />
-			<SocialLinkIcon ariaLabel='Email' icon={<AiOutlineMail />} />
-			<SocialLinkIcon ariaLabel='Download resume' icon={<DownloadIcon />} />
+			<SocialLinkIcon
+				ariaLabel='Github link'
+				link='https://github.com/tansonlee'
+				icon={<BsGithub />}
+				size='lg'
+			/>
+			<SocialLinkIcon
+				ariaLabel='Linkedin link'
+				link='https://www.linkedin.com/in/tansonlee/'
+				icon={<BsLinkedin />}
+				size='lg'
+			/>
+			<SocialLinkIcon
+				ariaLabel='Email'
+				link='mailto:leetanson@gmail.com?subject=Interest From Your Portfolio Website&body=Hi Tanson,'
+				icon={<AiOutlineMail />}
+				size='lg'
+			/>
+			<SocialLinkIcon
+				ariaLabel='Download resume'
+				link='/resume.pdf'
+				icon={<CgFileDocument />}
+				size='lg'
+			/>
 		</Flex>
-	);
-};
-
-const SocialLinkIcon = ({ ariaLabel, icon }: { ariaLabel: string; icon: any }) => {
-	return (
-		<IconButton
-			aria-label={ariaLabel}
-			icon={icon}
-			variant='outline'
-			colorScheme='blue'
-			size='lg'
-			isRound={true}
-			m={2}
-		/>
 	);
 };
 
