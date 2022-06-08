@@ -70,7 +70,11 @@ const ContactForm = () => {
 									isInvalid={form.errors.fullName && form.touched.fullName}
 								>
 									<FormLabel htmlFor='fullName'>Full Name</FormLabel>
-									<Input {...field} id='fullName' placeholder='John Appleseed' />
+									<Input
+										{...field}
+										id='fullName'
+										placeholder='Richard Hendricks'
+									/>
 									<FormErrorMessage>{form.errors.fullName}</FormErrorMessage>
 								</FormControl>
 							)}
@@ -89,7 +93,7 @@ const ContactForm = () => {
 									<Input
 										{...field}
 										id='email'
-										placeholder='john.appleseed@gmail.com'
+										placeholder='richard.hendricks@piedpiper.com'
 									/>
 									<FormErrorMessage>{form.errors.email}</FormErrorMessage>
 								</FormControl>
