@@ -1,4 +1,14 @@
-import { Box, Flex, Heading, IconButton, Link, ResponsiveValue, Text } from '@chakra-ui/react';
+import {
+	Box,
+	Flex,
+	Heading,
+	IconButton,
+	Link,
+	ResponsiveValue,
+	Text,
+	Tooltip,
+	useColorModeValue,
+} from '@chakra-ui/react';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import { CgFileDocument } from 'react-icons/cg';
@@ -24,12 +34,14 @@ const Hero = () => {
 const SocialLinks = () => {
 	return (
 		<Flex>
-			<SocialLinkIcon
-				ariaLabel='Github link'
-				link='https://github.com/tansonlee'
-				icon={<BsGithub />}
-				size='lg'
-			/>
+			<Tooltip label='GitHub' shouldWrapChildren>
+				<SocialLinkIcon
+					ariaLabel='Github link'
+					link='https://github.com/tansonlee'
+					icon={<BsGithub />}
+					size='lg'
+				/>
+			</Tooltip>
 			<SocialLinkIcon
 				ariaLabel='Linkedin link'
 				link='https://www.linkedin.com/in/tansonlee/'
@@ -54,6 +66,7 @@ const SocialLinks = () => {
 
 const ScrollDown = () => {
 	const router = useRouter();
+	const arrowColor = useColorModeValue('#000', '#fff');
 
 	const handleClick = () => {
 		router.push('#about');
@@ -61,20 +74,12 @@ const ScrollDown = () => {
 
 	return (
 		<Box mt='15vh' cursor='pointer' className='content' onClick={handleClick}>
-			<svg id='more-arrows'>
-				<polygon
-					className='arrow-top'
-					points='37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 '
-				/>
-				<polygon
-					className='arrow-middle'
-					points='37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 '
-				/>
-				<polygon
-					className='arrow-bottom'
-					points='37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 '
-				/>
-			</svg>
+			<div className='round'>
+				<span style={{ backgroundColor: arrowColor }}></span>
+				<span style={{ backgroundColor: arrowColor }}></span>
+				<span style={{ backgroundColor: arrowColor }}></span>
+				<span style={{ backgroundColor: arrowColor }}></span>
+			</div>
 		</Box>
 	);
 };

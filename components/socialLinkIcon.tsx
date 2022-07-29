@@ -5,11 +5,13 @@ const SocialLinkIcon = ({
 	link,
 	icon,
 	size,
+	props,
 }: {
 	ariaLabel: string;
 	link: string;
 	icon: any;
 	size: ResponsiveValue<(string & {}) | 'sm' | 'md' | 'lg' | 'xs'> | undefined;
+	props?: any;
 }) => {
 	return (
 		<Link href={link} isExternal>
@@ -21,6 +23,7 @@ const SocialLinkIcon = ({
 				size={size}
 				isRound={true}
 				m={2}
+				{...props}
 			/>
 		</Link>
 	);

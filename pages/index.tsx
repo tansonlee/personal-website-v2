@@ -1,16 +1,25 @@
-import { Box, Flex, Spacer, Stack } from '@chakra-ui/react';
+import { Box, Stack } from '@chakra-ui/react';
+import { useEffect } from 'react';
 import About from '../components/about';
 import Contact from '../components/contact';
 import Footer from '../components/footer';
 import Hero from '../components/hero';
 import Navbar from '../components/navbar';
 import Projects from '../components/projects';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+	useEffect(() => {
+		AOS.init({
+			duration: 1000,
+		});
+	}, []);
+
 	return (
 		<Box>
 			<Navbar />
-			<Stack maxW='70vw' margin='0 auto'>
+			<Stack maxW='2000px' margin='0 auto' w={{ base: '90vw', sm: '75vw' }}>
 				<Hero />
 				<About />
 				<Projects />

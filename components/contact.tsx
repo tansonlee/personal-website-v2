@@ -4,52 +4,90 @@ import {
 	Flex,
 	FormControl,
 	FormErrorMessage,
-	FormHelperText,
 	FormLabel,
 	Heading,
 	Input,
+	Link,
 	Text,
 	Textarea,
+	useColorModeValue,
 } from '@chakra-ui/react';
-import { Field, FieldInputProps, Form, Formik, FormikProps } from 'formik';
+import { Field, Form, Formik } from 'formik';
 import { RiSendPlaneFill } from 'react-icons/ri';
+import { useToast } from '@chakra-ui/react';
+
+type FormData = {
+	fullName: string;
+	email: string;
+	message: string;
+};
 
 const Contact = () => {
+	const linkColor = useColorModeValue('blue.500', 'blue.200');
+
+	const handleSubmit = (formData: FormData) => {
+		fetch('https://tansonlee-emailer.herokuapp.com/', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				subject: 'Personal Website: Contact Form Submission!',
+				body: `Full Name: ${formData.fullName}\n\nEmail: ${formData.email}\n\nMesasge: ${formData.message}`,
+			}),
+		});
+	};
+
 	return (
 		<Box id='contact'>
-			<Heading mt='64px'>contact me</Heading>
-			<Text mb={4}>
-				Contact me directly through this form or reachout through LinkedIn or my email.
+			<Heading mt='64px'>Contact Me</Heading>
+			<Text>
+				Feel free to contact me directly through this form or reachout through{' '}
+				<Link href='https://www.linkedin.com/in/tansonlee/' isExternal color={linkColor}>
+					LinkedIn
+				</Link>
+				.
 			</Text>
-			<ContactForm />
+			<ContactForm handleSubmit={handleSubmit} />
 		</Box>
 	);
 };
 
-const ContactForm = () => {
+const ContactForm = ({ handleSubmit }: { handleSubmit: (formData: FormData) => void }) => {
+	const toast = useToast();
+
 	const validateFullName = (fullName: string) => {
-		return !fullName ? 'Your full name is required' : undefined;
+		return !fullName.trim() ? 'Your full name is required' : undefined;
 	};
 
 	const validateEmail = (email: string) => {
 		const emailRegex =
 			/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		return !email.toLowerCase().match(emailRegex) ? 'Your email is required' : undefined;
+		return !email.trim().toLowerCase().match(emailRegex)
+			? 'A valid email is required'
+			: undefined;
 	};
 
 	const validateMessage = (message: string) => {
-		return !message ? 'A message is required' : undefined;
+		return !message.trim() ? 'A message is required' : undefined;
 	};
 
 	return (
 		<Formik
 			initialValues={{ fullName: '', email: '', message: '' }}
 			onSubmit={(values, actions) => {
+				handleSubmit(values);
 				setTimeout(() => {
-					alert(JSON.stringify(values, null, 2));
 					actions.setSubmitting(false);
+					toast({
+						title: 'Sucessfully Submitted!',
+						description: "Thanks for reaching out! I'll contact you soon.",
+						status: 'success',
+						duration: 5000,
+						isClosable: true,
+						position: 'top',
+					});
 				}, 1000);
-				console.log(values);
 			}}
 		>
 			{props => (
@@ -63,6 +101,7 @@ const ContactForm = () => {
 						<Field name='fullName' validate={validateFullName}>
 							{({ field, form }: any) => (
 								<FormControl
+									mt={4}
 									mr={{
 										base: 0,
 										md: 2,
@@ -83,6 +122,7 @@ const ContactForm = () => {
 						<Field name='email' validate={validateEmail}>
 							{({ field, form }: any) => (
 								<FormControl
+									mt={4}
 									ml={{
 										base: 0,
 										md: 2,
@@ -103,7 +143,10 @@ const ContactForm = () => {
 
 					<Field name='message' validate={validateMessage}>
 						{({ field, form }: any) => (
-							<FormControl isInvalid={form.errors.message && form.touched.message}>
+							<FormControl
+								mt={4}
+								isInvalid={form.errors.message && form.touched.message}
+							>
 								<FormLabel htmlFor='message'>Message</FormLabel>
 								<Textarea
 									{...field}

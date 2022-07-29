@@ -4,31 +4,66 @@
 	margin: 0;
 }
 
-#more-arrows {
-	width: 75px;
-	height: 65px;
-}
-#more-arrows:hover polygon {
-	fill: #000;
-	transition: all 0.2s ease-out;
-}
-#more-arrows:hover polygon.arrow-bottom {
-	transform: translateY(-18px);
-}
-#more-arrows:hover polygon.arrow-top {
-	transform: translateY(18px);
-}
-polygon {
-	fill: #000;
-	transition: all 0.2s ease-out;
-}
-polygon.arrow-middle {
-	opacity: 0.75;
-}
-polygon.arrow-top {
-	opacity: 0.5;
+.forward-button:hover > .forward-link {
+	transform: translateX(10px);
 }
 
-.learn-more-button:hover > .learn-more-link {
-	transform: translateX(10px);
+.backward-button:hover > .backward-link {
+	transform: translateX(-10px);
+}
+
+.round {
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+.round > span {
+	height: 3px;
+	margin: 1px;
+	width: 30px;
+	transition: 0.4s ease;
+	border-radius: 8px;
+	display: block;
+	position: absolute;
+}
+
+.round > span:first-child {
+	transform: rotate(45deg);
+	left: 25%;
+	bottom: 35%;
+}
+
+.round > span:nth-child(2) {
+	transform: rotate(-45deg);
+	left: 45%;
+	bottom: 35%;
+}
+
+.round > span:nth-child(3) {
+	transform: rotate(45deg);
+	left: 25%;
+	bottom: 54%;
+}
+
+.round > span:nth-child(4) {
+	transform: rotate(-45deg);
+	left: 45%;
+	bottom: 54%;
+}
+
+.round:hover span:nth-child(1) {
+	transform: rotate(-135deg);
+}
+
+.round:hover span:nth-child(2) {
+	transform: rotate(135deg);
+}
+
+.round:hover span:nth-child(3) {
+	transform: rotate(225deg);
+}
+
+.round:hover span:nth-child(4) {
+	transform: rotate(-225deg);
 }

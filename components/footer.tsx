@@ -1,4 +1,4 @@
-import { Box, Text, Flex, Button, useColorMode } from '@chakra-ui/react';
+import { Box, Text, Flex, Button, useColorMode, Tooltip } from '@chakra-ui/react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { CgFileDocument } from 'react-icons/cg';
@@ -9,15 +9,17 @@ const Footer = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<Box textAlign='center'>
-			<Text mt={10}>Made by Tanson Lee</Text>
+			<Text mt={20}>Tanson Lee</Text>
 			<Box mb={10}>
 				<Flex align='center' justify='center'>
-					<SocialLinkIcon
-						ariaLabel='Github link'
-						link='https://github.com/tansonlee'
-						icon={<BsGithub />}
-						size='sm'
-					/>
+					<Tooltip label='Github' fontSize='lg'>
+						<SocialLinkIcon
+							ariaLabel='Github link'
+							link='https://github.com/tansonlee'
+							icon={<BsGithub />}
+							size='sm'
+						/>
+					</Tooltip>
 					<SocialLinkIcon
 						ariaLabel='Linkedin link'
 						link='https://www.linkedin.com/in/tansonlee/'
