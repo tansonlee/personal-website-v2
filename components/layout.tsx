@@ -21,17 +21,19 @@ export const AboutPageLayout = ({
 		<Box ml={4}>
 			<BackwardButton href='/#about'>Back</BackwardButton>
 		</Box>
-		<Box maxW='2000px' margin='0 auto' w={{ base: '90vw', sm: '75vw' }}>
+		<Box maxW='1700px' margin='0 auto' w={{ base: '90vw', sm: '75vw' }}>
 			<Box>
 				<Stack spacing={8}>
 					<Stack align='center'>
 						<Heading textAlign='center'>{title}</Heading>
-						<Link href={link} isExternal>
-							{link}
-						</Link>
-						<Text textAlign='center' fontStyle='italic'>
-							{subtext}
-						</Text>
+						<Box textAlign='center'>
+							<Link href={link} isExternal>
+								{link}
+							</Link>
+							<Text textAlign='center' fontStyle='italic'>
+								{subtext}
+							</Text>
+						</Box>
 					</Stack>
 					<Flex justify='center'>
 						<Image

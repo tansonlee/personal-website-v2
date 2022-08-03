@@ -18,7 +18,7 @@ const styles = {
 			scrollBehavior: 'smooth',
 		},
 		body: {
-			bg: mode('gray.100', '#11151c')(props),
+			bg: mode('#fff', '#11151c')(props),
 		},
 	}),
 };

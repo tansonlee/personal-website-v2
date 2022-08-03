@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Heading, Image, Link, ListItem, Stack, Text, UnorderedList } from '@chakra-ui/react';
 import { AboutPageLayout } from '../../components/layout';
 
 const UniversityOfWaterloo = () => {
@@ -20,14 +20,14 @@ const UniversityOfWaterloo = () => {
 					<Heading size='md'>Freshman Year</Heading>
 					<Text>
 						My degree began with CS 145 where I learnt functional programming and the
-						basics of correctness and runtime proofs. This course included writing
-						programs using The Lambda Calculus and a mock machine language manipulating
-						bits in memory.
+						basics of correctness and runtime proofs. Apart from the usual, this course
+						included writing programs using The Lambda Calculus and a mock machine
+						language.
 					</Text>
 					<Text>
 						Following this, I took CS 146 which introduced interpreters, compilers, and
 						assemblers. We also learnt basic imperative programming in C. Our final
-						project was to write three interpreters with three different approaches.
+						project was to write three interpreters using three different approaches.
 					</Text>
 				</Stack>
 				<Stack>
@@ -41,20 +41,30 @@ const UniversityOfWaterloo = () => {
 					</Text>
 					<Text>
 						At the same time, I took CS 251 where we learnt about computer hardware. We
-						started with transistors and built up levels of abstraction to complex
-						pipelined computer processors. We analyzed how MIPS instructions get
-						executed on hardware and how to optimize speed on the hardware level.
+						started with transistors and built levels of abstraction up to complex
+						pipelined computer processors. We analyzed MIPS instruction execution on
+						hardware and optimization techniques.
 					</Text>
 					<Text>
 						The following term, I took CS 240 which is the first data structures and
-						algorithms course. We learnt about AVL trees and skip lists in addition to
-						the basic data structures. We also learnt several algorithms in many
-						categories such as data compression, string matching, and sorting.
+						algorithms course. We learnt about Quadtrees, B-trees and Skip Lists in
+						addition to the basic data structures. We also learnt several algorithms in
+						several categories such as data compression, string matching, and sorting.
 					</Text>
 					<Text>
 						Finally, CS 241 dove deeper into language parsing, assemby, and compilation.
-						We built a language system from scrath including low level memory managers.
+						We built a language system from scratch including low level memory
+						management tools.
 					</Text>
+				</Stack>
+				<Stack>
+					<Heading size='md'>Junior Year</Heading>
+					<Text>The computer science courses that I&lsquo;m taking this term are.</Text>
+					<UnorderedList pl={4}>
+						<ListItem>CS 350: Operating Systems</ListItem>
+						<ListItem>CS 341: Algorithms</ListItem>
+						<ListItem>CS 349: User Interfaces</ListItem>
+					</UnorderedList>
 				</Stack>
 			</Stack>
 		</AboutPageLayout>

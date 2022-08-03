@@ -1,14 +1,4 @@
-import {
-	Box,
-	Flex,
-	Heading,
-	IconButton,
-	Link,
-	ResponsiveValue,
-	Text,
-	Tooltip,
-	useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import { CgFileDocument } from 'react-icons/cg';
@@ -34,14 +24,12 @@ const Hero = () => {
 const SocialLinks = () => {
 	return (
 		<Flex>
-			<Tooltip label='GitHub' shouldWrapChildren>
-				<SocialLinkIcon
-					ariaLabel='Github link'
-					link='https://github.com/tansonlee'
-					icon={<BsGithub />}
-					size='lg'
-				/>
-			</Tooltip>
+			<SocialLinkIcon
+				ariaLabel='Github link'
+				link='https://github.com/tansonlee'
+				icon={<BsGithub />}
+				size='lg'
+			/>
 			<SocialLinkIcon
 				ariaLabel='Linkedin link'
 				link='https://www.linkedin.com/in/tansonlee/'

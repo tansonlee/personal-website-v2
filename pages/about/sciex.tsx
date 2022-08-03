@@ -9,12 +9,24 @@ const Sciex = () => {
 			subtext='Toronto, Canada | August 2019'
 			imagePath='/images/sciex.png'
 		>
-			<Box>
+			<Stack spacing={8}>
 				<Text>
-					I study Computer Science at the University of Waterloo. General things about my
-					experience. Courses I take etc...
+					Sciex sells mass spectrometers which are used in the field for medical research.
+					Along with the hardware, Sciex sells the software used to analyze mass
+					spectrometry data. I worked with the team that develops new techniques for data
+					analysis.
 				</Text>
-			</Box>
+				<Box>
+					<Heading size='md'>Automated Labeling</Heading>
+					<Text>
+						I implemented software which accurately labels data sets with high
+						confidence. Previously, professional researchers had to spend valuable
+						research time looking at graphs to label these data sets. The data from my
+						software is used in the machine learning department to train and evaluate
+						models.
+					</Text>
+				</Box>
+			</Stack>
 		</AboutPageLayout>
 	);
 };

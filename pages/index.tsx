@@ -19,7 +19,7 @@ const Home = () => {
 	return (
 		<Box>
 			<Navbar />
-			<Stack maxW='2000px' margin='0 auto' w={{ base: '90vw', sm: '75vw' }}>
+			<Stack maxW='1700px' margin='0 auto' w={{ base: '90vw', sm: '80vw' }}>
 				<Hero />
 				<About />
 				<Projects />

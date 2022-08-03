@@ -43,7 +43,12 @@ const Contact = () => {
 			<Heading mt='64px'>Contact Me</Heading>
 			<Text>
 				Feel free to contact me directly through this form or reachout through{' '}
-				<Link href='https://www.linkedin.com/in/tansonlee/' isExternal color={linkColor}>
+				<Link
+					href='https://www.linkedin.com/in/tansonlee/'
+					isExternal
+					color={linkColor}
+					textDecoration='underline'
+				>
 					LinkedIn
 				</Link>
 				.

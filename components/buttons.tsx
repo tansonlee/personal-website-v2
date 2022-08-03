@@ -1,9 +1,27 @@
 import { ArrowForwardIcon, ArrowBackIcon } from '@chakra-ui/icons';
 import { Button, Icon, Link } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
+import { isExternal } from 'util/types';
 
-export const ForwardButton = ({ href, children }: { href: string; children: string }) => {
+export const ForwardButton = ({
+	href,
+	isExternal = false,
+	children,
+}: {
+	href: string;
+	isExternal?: boolean;
+	children: string;
+}) => {
 	const router = useRouter();
+
+	const handleClick = () => {
+		if (isExternal) {
+			window.open(href, '_blank')?.focus();
+		} else {
+			router.push(href);
+		}
+	};
+
 	return (
 		<Button
 			className='forward-button'
@@ -13,7 +31,8 @@ export const ForwardButton = ({ href, children }: { href: string; children: stri
 			pr='20px'
 			pl={4}
 			mt={2}
-			onClick={() => router.push(href)}
+			mr={2}
+			onClick={handleClick}
 		>
 			<Link
 				className='forward-link'
@@ -27,8 +46,25 @@ export const ForwardButton = ({ href, children }: { href: string; children: stri
 	);
 };
 
-export const BackwardButton = ({ href, children }: { href: string; children: string }) => {
+export const BackwardButton = ({
+	href,
+	isExternal = false,
+	children,
+}: {
+	href: string;
+	isExternal?: boolean;
+	children: string;
+}) => {
 	const router = useRouter();
+
+	const handleClick = () => {
+		if (isExternal) {
+			window.open(href, '_blank')?.focus();
+		} else {
+			router.push(href);
+		}
+	};
+
 	return (
 		<Button
 			className='backward-button'
@@ -36,7 +72,7 @@ export const BackwardButton = ({ href, children }: { href: string; children: str
 			size='sm'
 			variant='outline'
 			mt={2}
-			onClick={() => router.push(href)}
+			onClick={handleClick}
 		>
 			<Link
 				pl={2}

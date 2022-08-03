@@ -16,9 +16,9 @@ const aboutData = [
 	{
 		name: 'Paper.xyz',
 		link: 'https://paper.xyz/',
-		date: 'Spring 2022',
+		date: 'May - Aug 2022',
 		description:
-			'Paper.xyz is a web3 startup primarily focused on developer tools to provide a frictionless checkout experience for utility-based NFTs.',
+			'Paper.xyz is a web3 startup primarily focused on developer tools to provide a frictionless checkout experience for NFTs.',
 		role: 'Software Engineer',
 		logo: <Image position='absolute' src={'/images/paper_logo.png'} h={14} ml={2} />,
 		path: '/about/paper',
@@ -26,10 +26,10 @@ const aboutData = [
 	{
 		name: 'Dreamschools',
 		link: 'https://dreamschools.com/',
-		date: 'Fall 2021',
+		date: 'Sept - Dec 2021',
 		description:
-			'Dreamschools is a EdTech startup providing a SASS product for childrens program providers to better manage their businesses.',
-		role: 'Software Developer',
+			'Dreamschools is a EdTech startup providing a SASS product for companies providing childrens programs.',
+		role: 'Software Engineer',
 		logo: <Image position='absolute' src={'/images/dreamschools_logo.png'} h={12} />,
 		path: '/about/dreamschools',
 	},
@@ -37,9 +37,8 @@ const aboutData = [
 		name: 'Sciex',
 		link: 'https://sciex.com/',
 		date: 'August 2019',
-		description:
-			'Dreamschools is a EdTech startup providing a SASS product for childrens program providers to better manage their businesses.',
-		role: 'Software Developer',
+		description: 'Sciex is a mass spectrometry company providing both hardware and software.',
+		role: 'Software Engineer',
 		logo: <Image position='absolute' src={'/images/sciex_logo.png'} mt={1} w={14} />,
 		path: '/about/sciex',
 	},
@@ -50,9 +49,9 @@ const About = () => {
 		<Box id='about'>
 			<Heading mt='64px'>About Me</Heading>
 			Hi, I&apos;m Tanson. I&apos;m a software engineer looking to create impact in all the
-			work that I do. I always want to learn from work or school or projects. My current
-			interests are in web3 and esoteric programming languages. Apart from engineering, I
-			enjoy exporing nature along with playing sports such as vollleyball and basketball.
+			work that I do. My current interests are in web3 and esoteric programming languages.
+			Apart from engineering, I enjoy exporing nature along with playing sports such as
+			basketball and volleyball.
 			<Stack mt={2} spacing={6}>
 				{aboutData.map(experience => (
 					<AboutMeSection

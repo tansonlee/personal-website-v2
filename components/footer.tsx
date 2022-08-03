@@ -1,4 +1,4 @@
-import { Box, Text, Flex, Button, useColorMode, Tooltip } from '@chakra-ui/react';
+import { Box, Text, Flex, Button, useColorMode } from '@chakra-ui/react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { CgFileDocument } from 'react-icons/cg';
@@ -12,14 +12,12 @@ const Footer = () => {
 			<Text mt={20}>Tanson Lee</Text>
 			<Box mb={10}>
 				<Flex align='center' justify='center'>
-					<Tooltip label='Github' fontSize='lg'>
-						<SocialLinkIcon
-							ariaLabel='Github link'
-							link='https://github.com/tansonlee'
-							icon={<BsGithub />}
-							size='sm'
-						/>
-					</Tooltip>
+					<SocialLinkIcon
+						ariaLabel='Github link'
+						link='https://github.com/tansonlee'
+						icon={<BsGithub />}
+						size='sm'
+					/>
 					<SocialLinkIcon
 						ariaLabel='Linkedin link'
 						link='https://www.linkedin.com/in/tansonlee/'

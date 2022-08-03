@@ -1,15 +1,4 @@
-import {
-	Box,
-	Button,
-	DarkMode,
-	Flex,
-	HStack,
-	LightMode,
-	Link,
-	Stack,
-	Text,
-	useColorMode,
-} from '@chakra-ui/react';
+import { Button, Flex, HStack, Link, useColorMode, Image } from '@chakra-ui/react';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
 
 const Navbar = () => {
@@ -23,13 +12,15 @@ const Navbar = () => {
 			top='0'
 			zIndex='999'
 			alignItems='center'
-			bg={
-				colorMode === 'light'
-					? 'backgroundColor.lightTranslucent'
-					: 'backgroundColor.darkTranslucent'
-			}
+			bg={colorMode === 'light' ? '#ffffffee' : '#11151cee'}
 		>
-			<Link href='/#hero'>TANSON</Link>
+			<Link href='/#hero'>
+				<Image
+					src={colorMode === 'light' ? '/logo_light.svg' : '/logo_dark.svg'}
+					w={8}
+					h={8}
+				/>
+			</Link>
 			<HStack spacing={14} alignItems='center' justifyContent='space-between'>
 				<Link href='/#about'>About</Link>
 				<Link href='/#projects'>Projects</Link>
