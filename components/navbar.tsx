@@ -19,6 +19,7 @@ const Navbar = () => {
 					src={colorMode === 'light' ? '/logo_light.svg' : '/logo_dark.svg'}
 					w={8}
 					h={8}
+					alt='home'
 				/>
 			</Link>
 			<HStack spacing={14} alignItems='center' justifyContent='space-between'>

@@ -12,10 +12,10 @@ const Dreamschools = () => {
 			<Stack spacing={8}>
 				<Text>
 					I was a software engineer at Dreamschools working on the full stack application
-					aiming to make childrens' programs more accessible to parents. Dreamschools is
-					an application which allows companies to manage payments, finances, attendance,
-					and more for their programs. It also allows parents to enroll, pay, and manage
-					their childrens' programs.
+					aiming to make childrens&lsquo; programs more accessible to parents.
+					Dreamschools is an application which allows companies to manage payments,
+					finances, attendance, and more for their programs. It also allows parents to
+					enroll, pay, and manage their childrens&lsquo; programs.
 				</Text>
 				<Box>
 					<Heading size='md'>
@@ -23,7 +23,7 @@ const Dreamschools = () => {
 					</Heading>
 					<Text>
 						I implemented a plethora of features for the checkout system used by parents
-						to pay for their childrens' programs. I added functionality for
+						to pay for their childrens&lsquo; programs. I added functionality for
 						subscriptions, gift cards, refunds, coupons, taxes, and receipts for an
 						improved experience. This benefited parents as they were able to have better
 						visibility as well as companies as they were able to promote their business.

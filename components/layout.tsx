@@ -44,6 +44,7 @@ export const AboutPageLayout = ({
 								base: '100%',
 								lg: '80%',
 							}}
+							alt=''
 						/>
 					</Flex>
 

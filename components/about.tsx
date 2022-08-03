@@ -10,7 +10,7 @@ const aboutData = [
 		description:
 			"I'm currently in my third year studying computer science at the University of Waterloo. This program is providing me strong fundamentals that I can apply when working in the industry.",
 		role: 'Computer Science',
-		logo: <Image position='absolute' src={'/images/waterloo_logo.png'} h={12} />,
+		logo: <Image alt='' position='absolute' src={'/images/waterloo_logo.png'} h={12} />,
 		path: '/about/university-of-waterloo',
 	},
 	{
@@ -20,7 +20,7 @@ const aboutData = [
 		description:
 			'Paper.xyz is a web3 startup primarily focused on developer tools to provide a frictionless checkout experience for NFTs.',
 		role: 'Software Engineer',
-		logo: <Image position='absolute' src={'/images/paper_logo.png'} h={14} ml={2} />,
+		logo: <Image alt='' position='absolute' src={'/images/paper_logo.png'} h={14} ml={2} />,
 		path: '/about/paper',
 	},
 	{
@@ -30,7 +30,7 @@ const aboutData = [
 		description:
 			'Dreamschools is a EdTech startup providing a SASS product for companies providing childrens programs.',
 		role: 'Software Engineer',
-		logo: <Image position='absolute' src={'/images/dreamschools_logo.png'} h={12} />,
+		logo: <Image alt='' position='absolute' src={'/images/dreamschools_logo.png'} h={12} />,
 		path: '/about/dreamschools',
 	},
 	{
@@ -39,7 +39,7 @@ const aboutData = [
 		date: 'August 2019',
 		description: 'Sciex is a mass spectrometry company providing both hardware and software.',
 		role: 'Software Engineer',
-		logo: <Image position='absolute' src={'/images/sciex_logo.png'} mt={1} w={14} />,
+		logo: <Image alt='' position='absolute' src={'/images/sciex_logo.png'} mt={1} w={14} />,
 		path: '/about/sciex',
 	},
 ];
@@ -55,6 +55,7 @@ const About = () => {
 			<Stack mt={2} spacing={6}>
 				{aboutData.map(experience => (
 					<AboutMeSection
+						key={experience.name}
 						name={experience.name}
 						link={experience.link}
 						description={experience.description}

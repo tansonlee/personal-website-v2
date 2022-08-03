@@ -49,7 +49,7 @@ const Paper = () => {
 				<Box>
 					<Heading size='md'>USD Payouts</Heading>
 					<Text>
-						Many sellers don't feel comfortable holding cryptocurrency due to its
+						Many sellers don&lsquo;t feel comfortable holding cryptocurrency due to its
 						volatility. I added the ability for sellers to be paid out in USD. This made
 						sellers more comfortable and onboarded new people into the web3 space.
 					</Text>
@@ -85,8 +85,8 @@ const Paper = () => {
 				</Box>
 				<Text>
 					In addition to these larger projects, I worked on smaller tasks including
-					enabling multi-factor authentication for users' wallets and signature based
-					minting. I also participated extensively in product discussions, building
+					enabling multi-factor authentication for users&lsquo; wallets and signature
+					based minting. I also participated extensively in product discussions, building
 					user-facing documentation, and providing developer support.
 				</Text>
 			</Stack>

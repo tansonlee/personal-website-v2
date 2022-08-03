@@ -40,6 +40,7 @@ const FooderProjectCard = () => {
 						h='220px'
 						m={2}
 						border='1px solid #fff'
+						alt=''
 					/>
 					<Image
 						rounded='md'
@@ -48,6 +49,7 @@ const FooderProjectCard = () => {
 						m={2}
 						border='1px solid #fff'
 						display={{ base: 'none', sm: 'block', md: 'none', lg: 'none', xl: 'block' }}
+						alt=''
 					/>
 					<Image
 						rounded='md'
@@ -62,6 +64,7 @@ const FooderProjectCard = () => {
 							lg: 'block',
 							xl: 'block',
 						}}
+						alt=''
 					/>
 					<Image
 						rounded='md'
@@ -69,6 +72,7 @@ const FooderProjectCard = () => {
 						h='220px'
 						m={2}
 						border='1px solid #fff'
+						alt=''
 					/>
 				</Flex>
 

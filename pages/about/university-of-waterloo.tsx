@@ -10,8 +10,8 @@ const UniversityOfWaterloo = () => {
 		>
 			<Stack spacing={8}>
 				<Text>
-					I'm a third year Computer Science student at the University of Waterloo. I learn
-					fundamental concepts in school and practice applying them through my
+					I&lsquo;m a third year Computer Science student at the University of Waterloo. I
+					learn fundamental concepts in school and practice applying them through my
 					internships. Learn more about my experience at{' '}
 					<Link href='/about/paper'>Paper.xyz</Link> and{' '}
 					<Link href='/about/dreamschools'>Dreamschools</Link>.
