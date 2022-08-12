@@ -22,7 +22,7 @@
 	height: 3px;
 	margin: 1px;
 	width: 30px;
-	transition: 0.4s ease;
+	transition: 300ms ease-in;
 	border-radius: 8px;
 	display: block;
 	position: absolute;

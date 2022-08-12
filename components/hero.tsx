@@ -54,6 +54,7 @@ const SocialLinks = () => {
 
 const ScrollDown = () => {
 	const router = useRouter();
+
 	const arrowColor = useColorModeValue('#000', '#fff');
 
 	const handleClick = () => {
