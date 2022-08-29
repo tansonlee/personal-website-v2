@@ -33,12 +33,11 @@ const FooderProjectCard = () => {
 				<Heading as='h3' size='lg' textAlign='center'>
 					Fooder
 				</Heading>
-				<Flex justify='center' align='center'>
+				<HStack justify='center'>
 					<Image
 						rounded='md'
 						src='/images/fooder_1.png'
 						h='220px'
-						m={2}
 						border='1px solid #fff'
 						alt=''
 					/>
@@ -46,35 +45,26 @@ const FooderProjectCard = () => {
 						rounded='md'
 						src='/images/fooder_2.png'
 						h='220px'
-						m={2}
 						border='1px solid #fff'
-						display={{ base: 'none', sm: 'block', md: 'none', lg: 'none', xl: 'block' }}
+						display={{ base: 'none', sm: 'block', md: 'none', xl: 'block' }}
 						alt=''
 					/>
 					<Image
 						rounded='md'
 						src='/images/fooder_3.png'
 						h='220px'
-						m={2}
 						border='1px solid #fff'
-						display={{
-							base: 'none',
-							sm: 'block',
-							md: 'none',
-							lg: 'block',
-							xl: 'block',
-						}}
+						display={{ base: 'none', sm: 'block', md: 'none', lg: 'block' }}
 						alt=''
 					/>
 					<Image
 						rounded='md'
 						src='/images/fooder_4.png'
 						h='220px'
-						m={2}
 						border='1px solid #fff'
 						alt=''
 					/>
-				</Flex>
+				</HStack>
 
 				<Box>
 					<Text>

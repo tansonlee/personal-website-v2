@@ -1,5 +1,4 @@
 import {
-	Text,
 	Button,
 	Flex,
 	HStack,
@@ -7,30 +6,17 @@ import {
 	useColorMode,
 	Image,
 	useBreakpointValue,
-	IconButton,
-	Drawer,
 	useDisclosure,
-	DrawerOverlay,
-	DrawerContent,
-	DrawerCloseButton,
-	DrawerHeader,
-	DrawerBody,
-	DrawerFooter,
 	VStack,
-	Collapse,
-	CloseButton,
 	Box,
 	Heading,
 	useColorModeValue,
 } from '@chakra-ui/react';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
-import { FiMenu } from 'react-icons/fi';
-import { useRef, useState } from 'react';
 import SocialLinkIcon from './socialLinkIcon';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import { CgFileDocument } from 'react-icons/cg';
-import { useRouter } from 'next/router';
 
 const Navbar = () => {
 	const isDesktop = useBreakpointValue({ base: false, md: true });
@@ -40,7 +26,7 @@ const Navbar = () => {
 
 const MobileNavbar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
-	const { isOpen, onClose, onOpen, onToggle } = useDisclosure();
+	const { isOpen, onClose, onToggle } = useDisclosure();
 
 	const hamburgerColor = useColorModeValue('#000', '#fff');
 	const bgColor = useColorModeValue('#dde3e8', '#1e2026fa');
