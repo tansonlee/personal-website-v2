@@ -1,4 +1,16 @@
-import { Image, Box, Flex, Heading, Grid, Text, Link, HStack } from '@chakra-ui/react';
+import {
+	Image,
+	Box,
+	Flex,
+	Heading,
+	Grid,
+	Text,
+	Link,
+	HStack,
+	Stack,
+	Code,
+	useColorModeValue,
+} from '@chakra-ui/react';
 import { BsGithub } from 'react-icons/bs';
 import { ForwardButton } from './buttons';
 import { Card } from './card';
@@ -16,24 +28,142 @@ const Projects = () => {
 				/>
 				<Heading>Projects</Heading>
 			</Flex>
-			<Grid templateColumns='repeat(auto-fit, minmax(300px, 1fr))' gap={8}>
+			<Grid templateColumns='repeat(auto-fit, minmax(400px, 1fr))' gap={8}>
+				<NotifyrProjectCard />
 				<FooderProjectCard />
+				<PyScriptProjectCard />
 				<Box>
-					<Text>More to come...</Text>
+					<Text>
+						Visit my{' '}
+						<Link textDecor='underline' href='https://github.com/tansonlee' isExternal>
+							GitHub
+						</Link>{' '}
+						for more!
+					</Text>
 				</Box>
 			</Grid>
 		</Box>
 	);
 };
 
+const PyScriptProjectCard = () => {
+	return (
+		<Card>
+			<Stack w='100%'>
+				<Heading as='h3' size='lg' textAlign='center'>
+					PyScript
+				</Heading>
+				<HStack justify='center'>
+					{/* <Image
+						rounded='md'
+						src='/images/notifyr.png'
+						h='220px'
+						border='1px solid #666'
+						display={{ base: 'none', sm: 'block', md: 'none', lg: 'block' }}
+						alt=''
+					/> */}
+					<Box
+						overflowX='auto'
+						w='100%'
+						fontSize='xs'
+						bgColor={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+						p={2}
+						borderRadius='md'
+					>
+						<pre>
+							{`function determine_prime {
+    change d_prime_result 1
+    change d_prime_current 2
+    if |d_prime_number < 2| {
+        change d_prime_result 0
+    } {}
+    while |d_prime_current < d_prime_number|
+    {
+        if |!d_prime_number % d_prime_current! = 0| {
+            change d_prime_result 0
+        } {}
+        change d_prime_current !d_prime_current + 1!
+    }
+}`}
+						</pre>
+					</Box>
+				</HStack>
+
+				<Box>
+					<Text>
+						PyScript is a scripting language with all core features including variables,
+						functions, loops, conditionals, I/O, and comments. I implemented a compiler
+						and assembler to translate PyScript down to a custom machine language which
+						is executed by a custom runtime simulator.
+					</Text>
+					<Flex>
+						<ForwardButton
+							isExternal={true}
+							href='https://replit.com/@TansonL/PyScript#program.ps'
+						>
+							Hosted Project
+						</ForwardButton>
+						<ForwardButton
+							isExternal={true}
+							href='https://github.com/tansonlee/PyScript#introduction'
+						>
+							Code
+						</ForwardButton>
+					</Flex>
+				</Box>
+			</Stack>
+		</Card>
+	);
+};
+
+const NotifyrProjectCard = () => {
+	return (
+		<Card>
+			<Stack>
+				<Heading as='h3' size='lg' textAlign='center'>
+					Notifyr
+				</Heading>
+				<HStack justify='center'>
+					<Image
+						rounded='md'
+						src='/images/notifyr.png'
+						h='220px'
+						border='1px solid #666'
+						display={{ base: 'none', sm: 'block', md: 'none', lg: 'block' }}
+						alt=''
+					/>
+				</HStack>
+
+				<Box>
+					<Text>
+						Notifyr is a developer tool allowing SASS applications to send notifications
+						to their customers. This includes an SDK, API, dashboard, and documentation.
+					</Text>
+					<Flex>
+						<ForwardButton isExternal={true} href='https://notifyr.vercel.app/'>
+							Hosted Project
+						</ForwardButton>
+						<ForwardButton
+							isExternal={true}
+							href='https://github.com/tansonlee/notifyr'
+						>
+							Code
+						</ForwardButton>
+					</Flex>
+				</Box>
+			</Stack>
+		</Card>
+	);
+};
+
 const FooderProjectCard = () => {
 	return (
 		<Card>
-			<Box>
+			<Stack>
 				<Heading as='h3' size='lg' textAlign='center'>
 					Fooder
 				</Heading>
-				<HStack justify='center'>
+				<HStack justify='center' overflow='hidden'>
 					<Image
 						rounded='md'
 						src='/images/fooder_1.png'
@@ -84,7 +214,7 @@ const FooderProjectCard = () => {
 						</ForwardButton>
 					</Flex>
 				</Box>
-			</Box>
+			</Stack>
 		</Card>
 	);
 };
