@@ -4,6 +4,10 @@
 	margin: 0;
 }
 
+img {
+	object-fit: cover;
+}
+
 .forward-button:hover > .forward-link {
 	transform: translateX(10px);
 }

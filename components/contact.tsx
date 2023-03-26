@@ -25,8 +25,9 @@ type FormData = {
 const Contact = () => {
 	const linkColor = useColorModeValue('blue.500', 'blue.200');
 
-	const handleSubmit = (formData: FormData) => {
-		fetch('https://tansonlee-emailer.herokuapp.com/', {
+	const handleSubmit = async (formData: FormData) => {
+		console.log('sending email from client');
+		const response = await fetch('/api/send_email', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -36,6 +37,7 @@ const Contact = () => {
 				body: `Full Name: ${formData.fullName}\n\nEmail: ${formData.email}\n\nMesasge: ${formData.message}`,
 			}),
 		});
+		console.log(response);
 	};
 
 	return (
