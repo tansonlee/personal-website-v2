@@ -14,11 +14,22 @@ const aboutData = [
 		path: '/about/university-of-waterloo',
 	},
 	{
-		name: 'Paper.xyz',
+		name: 'Global Illumination -- Manhattan, New York',
+		link: 'https://ill.inc/',
+		date: 'Jan - Apr 2023',
+		description: 'Global Illumination is developing a voxel based game called biomes.',
+		role: 'Software Engineer',
+		logo: (
+			<Image alt='' position='absolute' src={'/images/global_illumination_logo.png'} h={14} />
+		),
+		path: '/about/global-illumination',
+	},
+	{
+		name: 'Paper.xyz -- San Francisco, California',
 		link: 'https://paper.xyz/',
 		date: 'May - Aug 2022',
 		description:
-			'Paper.xyz is a web3 startup primarily focused on developer tools to provide a frictionless checkout experience for NFTs.',
+			'Paper.xyz is a startup primarily focused on creating developer-facing products to provide frictionless experiences for NFTs.',
 		role: 'Software Engineer',
 		logo: <Image alt='' position='absolute' src={'/images/paper_logo.png'} h={14} ml={2} />,
 		path: '/about/paper',

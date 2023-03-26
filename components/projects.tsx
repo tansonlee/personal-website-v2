@@ -28,21 +28,51 @@ const Projects = () => {
 				/>
 				<Heading>Projects</Heading>
 			</Flex>
+			<Text mb={4}>
+				Visit my{' '}
+				<Link textDecor='underline' href='https://github.com/tansonlee' isExternal>
+					GitHub
+				</Link>{' '}
+				for more!
+			</Text>
 			<Grid templateColumns='repeat(auto-fit, minmax(400px, 1fr))' gap={8}>
+				<RayTracerProjectCard />
 				<NotifyrProjectCard />
 				<FooderProjectCard />
 				<PyScriptProjectCard />
-				<Box>
-					<Text>
-						Visit my{' '}
-						<Link textDecor='underline' href='https://github.com/tansonlee' isExternal>
-							GitHub
-						</Link>{' '}
-						for more!
-					</Text>
-				</Box>
 			</Grid>
 		</Box>
+	);
+};
+
+const RayTracerProjectCard = () => {
+	return (
+		<Card>
+			<Stack w='100%'>
+				<Heading as='h3' size='lg' textAlign='center'>
+					Ray Tracer
+				</Heading>
+				<HStack justify='center'>
+					<Image rounded='md' src='/images/ray_tracer.png' h='220px' alt='' />
+				</HStack>
+
+				<Box>
+					<Text>
+						A ray tracer fitted with features such as multi-threading and camera
+						positioning. It can render multiple materials including metal, glass, and
+						matte surfaces.
+					</Text>
+					<Flex>
+						<ForwardButton
+							isExternal={true}
+							href='https://github.com/tansonlee/ray-tracer'
+						>
+							Code
+						</ForwardButton>
+					</Flex>
+				</Box>
+			</Stack>
+		</Card>
 	);
 };
 
@@ -54,14 +84,6 @@ const PyScriptProjectCard = () => {
 					PyScript
 				</Heading>
 				<HStack justify='center'>
-					{/* <Image
-						rounded='md'
-						src='/images/notifyr.png'
-						h='220px'
-						border='1px solid #666'
-						display={{ base: 'none', sm: 'block', md: 'none', lg: 'block' }}
-						alt=''
-					/> */}
 					<Box
 						overflowX='auto'
 						w='100%'
@@ -129,7 +151,6 @@ const NotifyrProjectCard = () => {
 						src='/images/notifyr.png'
 						h='220px'
 						border='1px solid #666'
-						display={{ base: 'none', sm: 'block', md: 'none', lg: 'block' }}
 						alt=''
 					/>
 				</HStack>

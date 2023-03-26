@@ -23,10 +23,11 @@ type FormData = {
 };
 
 const Contact = () => {
+	const toast = useToast();
 	const linkColor = useColorModeValue('blue.500', 'blue.200');
 
-	const handleSubmit = (formData: FormData) => {
-		fetch('https://tansonlee-emailer.herokuapp.com/', {
+	const handleSubmit = async (formData: FormData) => {
+		const response = await fetch('/api/send_email', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -36,6 +37,24 @@ const Contact = () => {
 				body: `Full Name: ${formData.fullName}\n\nEmail: ${formData.email}\n\nMesasge: ${formData.message}`,
 			}),
 		});
+
+		const isSuccess = response.status === 200;
+		const title = isSuccess ? 'Successfully Submitted!' : 'Uh oh...';
+		const description = isSuccess
+			? "Thanks for reaching out! I'll be in contact with you soon."
+			: "Something went wrong. I've been notified but please try again later.";
+		const status = isSuccess ? 'success' : 'error';
+
+		setTimeout(() => {
+			toast({
+				title,
+				description,
+				status,
+				duration: 5000,
+				isClosable: true,
+				position: 'top',
+			});
+		}, 1000);
 	};
 
 	return (
@@ -59,8 +78,6 @@ const Contact = () => {
 };
 
 const ContactForm = ({ handleSubmit }: { handleSubmit: (formData: FormData) => void }) => {
-	const toast = useToast();
-
 	const validateFullName = (fullName: string) => {
 		return !fullName.trim() ? 'Your full name is required' : undefined;
 	};
@@ -82,17 +99,7 @@ const ContactForm = ({ handleSubmit }: { handleSubmit: (formData: FormData) => v
 			initialValues={{ fullName: '', email: '', message: '' }}
 			onSubmit={(values, actions) => {
 				handleSubmit(values);
-				setTimeout(() => {
-					actions.setSubmitting(false);
-					toast({
-						title: 'Sucessfully Submitted!',
-						description: "Thanks for reaching out! I'll contact you soon.",
-						status: 'success',
-						duration: 5000,
-						isClosable: true,
-						position: 'top',
-					});
-				}, 1000);
+				setTimeout(() => actions.setSubmitting(false), 1000);
 			}}
 		>
 			{props => (

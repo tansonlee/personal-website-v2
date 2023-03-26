@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/react';
+import { Box, Stack, useColorMode } from '@chakra-ui/react';
 import { useEffect } from 'react';
 import About from '../components/about';
 import Contact from '../components/contact';
@@ -10,11 +10,17 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Home = () => {
+	const colorMode = useColorMode();
+
 	useEffect(() => {
 		AOS.init({
 			duration: 1000,
 		});
 	}, []);
+
+	useEffect(() => {
+		AOS.refresh();
+	}, [colorMode]);
 
 	return (
 		<Box>
