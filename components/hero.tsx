@@ -29,24 +29,28 @@ const SocialLinks = () => {
 				link='https://github.com/tansonlee'
 				icon={<BsGithub />}
 				size='lg'
+				tooltip='GitHub'
 			/>
 			<SocialLinkIcon
 				ariaLabel='Linkedin link'
 				link='https://www.linkedin.com/in/tansonlee/'
 				icon={<BsLinkedin />}
 				size='lg'
+				tooltip='LinkedIn'
 			/>
 			<SocialLinkIcon
 				ariaLabel='Email'
 				link='mailto:leetanson@gmail.com?subject=Interest From Your Portfolio Website&body=Hi Tanson,'
 				icon={<AiOutlineMail />}
 				size='lg'
+				tooltip='Email'
 			/>
 			<SocialLinkIcon
 				ariaLabel='Download resume'
 				link='/resume.pdf'
 				icon={<CgFileDocument />}
 				size='lg'
+				tooltip='Resume'
 			/>
 		</Flex>
 	);
