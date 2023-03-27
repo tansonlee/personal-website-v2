@@ -35,7 +35,13 @@ const Projects = () => {
 				</Link>{' '}
 				for more!
 			</Text>
-			<Grid templateColumns='repeat(auto-fit, minmax(400px, 1fr))' gap={8}>
+			<Grid
+				gridTemplateColumns={{
+					base: 'repeat(1, minmax(0, 1fr))',
+					lg: 'repeat(2, minmax(0, 1fr))',
+				}}
+				gap={8}
+			>
 				<RayTracerProjectCard />
 				<NotifyrProjectCard />
 				<FooderProjectCard />

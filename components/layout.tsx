@@ -14,7 +14,7 @@ export const AboutPageLayout = ({
 	link?: string;
 	subtext: string;
 	imagePath: string;
-	children: JSX.Element;
+	children: React.ReactNode;
 }) => (
 	<Box mb={20}>
 		<Navbar />
