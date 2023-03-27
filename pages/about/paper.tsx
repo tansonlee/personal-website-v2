@@ -16,8 +16,8 @@ const Paper = () => {
 	return (
 		<AboutPageLayout
 			title='Paper.xyz'
-			link='https://paper.xyz'
-			subtext='San Francisco, California | May - Aug 2022'
+			location='San Francisco, California'
+			date='May - Aug 2022'
 			imagePath='/images/paper.png'
 		>
 			<Stack spacing={8}>

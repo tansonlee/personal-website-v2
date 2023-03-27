@@ -5,8 +5,8 @@ const Dreamschools = () => {
 	return (
 		<AboutPageLayout
 			title='Dreamschools'
-			link='https://dreamschools.com'
-			subtext='Toronto, Canada | Sept - Dec 2021'
+			location='Toronto, Ontario'
+			date='Sept - Dec 2021'
 			imagePath='/images/dreamschools.png'
 		>
 			<Stack spacing={8}>

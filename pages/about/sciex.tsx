@@ -5,8 +5,8 @@ const Sciex = () => {
 	return (
 		<AboutPageLayout
 			title='Sciex'
-			link='https://sciex.com'
-			subtext='Toronto, Canada | August 2019'
+			location='Toronto, Canada'
+			date='August 2019'
 			imagePath='/images/sciex.png'
 		>
 			<Stack spacing={8}>

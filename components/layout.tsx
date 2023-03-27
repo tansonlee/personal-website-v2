@@ -5,14 +5,14 @@ import Navbar from './navbar';
 
 export const AboutPageLayout = ({
 	title,
-	link,
-	subtext,
+	location,
+	date,
 	imagePath,
 	children,
 }: {
 	title: string;
-	link?: string;
-	subtext: string;
+	location: string;
+	date: string;
 	imagePath: string;
 	children: React.ReactNode;
 }) => (
@@ -26,14 +26,10 @@ export const AboutPageLayout = ({
 				<Stack spacing={8}>
 					<Stack align='center'>
 						<Heading textAlign='center'>{title}</Heading>
-						<Box textAlign='center'>
-							<Link href={link} isExternal>
-								{link}
-							</Link>
-							<Text textAlign='center' fontStyle='italic'>
-								{subtext}
-							</Text>
-						</Box>
+						<Text textAlign='center'>{location}</Text>
+						<Text textAlign='center' fontStyle='italic'>
+							{date}
+						</Text>
 					</Stack>
 					<Flex justify='center'>
 						<Image
