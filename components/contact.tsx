@@ -26,7 +26,7 @@ const Contact = () => {
 	const toast = useToast();
 	const linkColor = useColorModeValue('blue.500', 'blue.200');
 
-	const handleSubmit = async (formData: FormData) => {
+	const handleSubmit = async (formData: FormData, clearForm: () => void) => {
 		const response = await fetch('/api/send_email', {
 			method: 'POST',
 			headers: {
@@ -54,6 +54,10 @@ const Contact = () => {
 				isClosable: true,
 				position: 'top',
 			});
+
+			if (isSuccess) {
+				clearForm();
+			}
 		}, 1000);
 	};
 
@@ -77,7 +81,11 @@ const Contact = () => {
 	);
 };
 
-const ContactForm = ({ handleSubmit }: { handleSubmit: (formData: FormData) => void }) => {
+const ContactForm = ({
+	handleSubmit,
+}: {
+	handleSubmit: (formData: FormData, clearForm: () => void) => void;
+}) => {
 	const validateFullName = (fullName: string) => {
 		return !fullName.trim() ? 'Your full name is required' : undefined;
 	};
@@ -98,8 +106,10 @@ const ContactForm = ({ handleSubmit }: { handleSubmit: (formData: FormData) => v
 		<Formik
 			initialValues={{ fullName: '', email: '', message: '' }}
 			onSubmit={(values, actions) => {
-				handleSubmit(values);
-				setTimeout(() => actions.setSubmitting(false), 1000);
+				handleSubmit(values, () => actions.resetForm());
+				setTimeout(() => {
+					actions.setSubmitting(false);
+				}, 1000);
 			}}
 		>
 			{props => (
