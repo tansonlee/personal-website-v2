@@ -25,46 +25,43 @@ const aboutData: AboutData[] = [
 		path: '/about/university-of-waterloo',
 	},
 	{
-		name: 'SWE @ Global Illumination',
+		name: 'Global Illumination',
 		location: 'Manhattan, New York',
 		link: 'https://ill.inc/',
 		date: 'Jan - Apr 2023',
 		description: 'Global Illumination is developing a voxel based game called biomes.',
-		// role: 'Software Engineer',
 		logo: (
 			<Image alt='' position='absolute' src={'/images/global_illumination_logo.png'} h={14} />
 		),
 		path: '/about/global-illumination',
 	},
 	{
-		name: 'SWE @ Paper.xyz',
+		name: 'Paper.xyz',
 		location: 'San Francisco, California',
 		link: 'https://paper.xyz/',
 		date: 'May - Aug 2022',
 		description:
-			'Paper.xyz is a startup primarily focused on creating developer-facing products to provide frictionless experiences for NFTs.',
-		// role: 'Software Engineer',
+			'Paper.xyz is a startup focused on creating developer tools to provide friendly web3 experiences.',
 		logo: <Image alt='' position='absolute' src={'/images/paper_logo.png'} h={14} ml={2} />,
 		path: '/about/paper',
 	},
 	{
-		name: 'SWE @ Dreamschools',
+		name: 'Dreamschools',
 		location: 'Toronto, Ontario',
 		link: 'https://dreamschools.com/',
 		date: 'Sept - Dec 2021',
 		description:
-			'Dreamschools is a EdTech startup providing a SASS product for companies providing childrens programs.',
-		// role: 'Software Engineer',
+			"Dreamschools is a EdTech startup providing a SASS product for companies providing children's programs.",
 		logo: <Image alt='' position='absolute' src={'/images/dreamschools_logo.png'} h={12} />,
 		path: '/about/dreamschools',
 	},
 	{
-		name: 'SWE @ Sciex',
+		name: 'Sciex',
 		location: 'Toronto, Ontario',
 		link: 'https://sciex.com/',
 		date: 'August 2019',
-		description: 'Sciex is a mass spectrometry company providing both hardware and software.',
-		// role: 'Software Engineer',
+		description:
+			'Sciex is a mass spectrometry company providing both hardware and software products.',
 		logo: <Image alt='' position='absolute' src={'/images/sciex_logo.png'} mt={1} w={14} />,
 		path: '/about/sciex',
 	},
@@ -75,9 +72,9 @@ const About = () => {
 		<Box id='about'>
 			<Heading mt='64px'>About Me</Heading>
 			Hi, I&apos;m Tanson. I&apos;m a software engineer looking to create impact in all the
-			work that I do. My current interests are in web3 and esoteric programming languages.
-			Apart from engineering, I enjoy exporing nature along with playing sports such as
-			basketball and volleyball.
+			work that I do. My current interests are in game development, web3 and esoteric
+			programming languages. Apart from engineering, I enjoy exploring nature along with
+			playing sports such as basketball and volleyball.
 			<Stack mt={2} spacing={6}>
 				{aboutData.map(experience => (
 					<AboutMeSection
@@ -142,7 +139,7 @@ const AboutMeSection = ({
 					</Flex>
 					<Text>{description}</Text>
 
-					<ForwardButton href={path}>Learn More</ForwardButton>
+					<ForwardButton href={path}>My Experience</ForwardButton>
 				</Box>
 			</>
 		</Card>
