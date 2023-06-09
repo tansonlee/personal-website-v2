@@ -24,11 +24,12 @@ const UniversityOfWaterloo = () => {
 					I&lsquo;m a third year Computer Science student at the University of Waterloo. I
 					learn fundamental concepts in school and practice applying them through my
 					internships. Learn more about my experience at{' '}
-					<Link href='/about/paper'>Paper.xyz</Link> and{' '}
+					<Link href='/about/global-illumination'>Global Illumination</Link>,{' '}
+					<Link href='/about/paper'>Paper.xyz</Link>, and{' '}
 					<Link href='/about/dreamschools'>Dreamschools</Link>.
 				</Text>
 				<Stack>
-					<Heading size='md'>Freshman Year</Heading>
+					<Heading size='md'>First Year</Heading>
 					<Text>
 						My degree began with{' '}
 						<Text as='span' fontWeight='semibold'>
@@ -49,7 +50,7 @@ const UniversityOfWaterloo = () => {
 					</Text>
 				</Stack>
 				<Stack>
-					<Heading size='md'>Sophmore Year</Heading>
+					<Heading size='md'>Second Year</Heading>
 					<Text>
 						Starting second year, I took{' '}
 						<Text as='span' fontWeight='semibold'>
@@ -65,9 +66,10 @@ const UniversityOfWaterloo = () => {
 						<Text as='span' fontWeight='semibold'>
 							CS 251
 						</Text>{' '}
-						where we learnt about computer hardware. We started with transistors and
-						built levels of abstraction up to complex pipelined computer processors. We
-						analyzed MIPS instruction execution on hardware and optimization techniques.
+						where we learnt about computer hardware. We started with learning about
+						transistors and built up levels of abstraction all the way to pipelined
+						computer CPUs. We analyzed ARM instruction execution on hardware and applied
+						hardware optimization techniques.
 					</Text>
 					<Text>
 						The following term, I took{' '}
@@ -75,9 +77,9 @@ const UniversityOfWaterloo = () => {
 							CS 240
 						</Text>{' '}
 						which is the first data structures and algorithms course. We learnt about
-						Quadtrees, B-trees and Skip Lists in addition to the basic data structures.
-						We also learnt several algorithms in several categories such as data
-						compression, string matching, and sorting.
+						Quadtrees, B-trees and Skip Lists in addition to the typical basic data
+						structures. We also learnt several algorithms in several categories such as
+						data compression, string matching, and sorting.
 					</Text>
 					<Text>
 						Finally,{' '}
@@ -95,10 +97,11 @@ const UniversityOfWaterloo = () => {
 						<Text as='span' fontWeight='semibold'>
 							CS 350
 						</Text>{' '}
-						Operating Systems. In this class, I first learnt about multithreaded
+						Operating Systems. In this class, we first learnt about multithreaded
 						programs using synchronization primitives such as locks, semaphores, and
-						conditional variables. I then implemented several features to an incomplete
-						operating system such as paging, forking processes (<Code>fork</Code>
+						conditional variables. We then implemented these primitives within a mock
+						operating system. Finally, we implemented several crucial primitives to the
+						operating system including paging, forking processes (<Code>fork</Code>
 						), and executing programs (<Code>execv</Code>
 						).
 					</Text>
@@ -107,9 +110,9 @@ const UniversityOfWaterloo = () => {
 						<Text as='span' fontWeight='semibold'>
 							CS 341
 						</Text>{' '}
-						Algorithms which taught me many algorithms and concepts surrounding
-						algorithms. A few algorithm topics were divide and concur; dynamic
-						programming; graph algorithms; and greedy algorithms. I also explored the P
+						Algorithms which taught many algorithms and theoretical concepts surrounding
+						algorithms in general. A few topics were divide and conquer, dynamic
+						programming, graph algorithms, and greedy algorithms. I also explored the P
 						vs NP millennium problem.
 					</Text>
 					<Text>
