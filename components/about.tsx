@@ -19,7 +19,7 @@ const aboutData: AboutData[] = [
 		link: 'https://uwaterloo.ca/',
 		date: 'Sept 2020 - Apr 2025',
 		description:
-			"I'm currently in my third year studying computer science at the University of Waterloo. This program is providing me strong fundamentals that I can apply when working in the industry.",
+			"I'm currently in my third year of Computer Science at the University of Waterloo taking interesting courses such as Operating Systems, Networking, and Algorithms.",
 		role: 'Computer Science',
 		logo: <Image alt='' position='absolute' src={'/images/waterloo_logo.png'} h={12} />,
 		path: '/about/university-of-waterloo',
@@ -29,7 +29,8 @@ const aboutData: AboutData[] = [
 		location: 'Manhattan, New York',
 		link: 'https://ill.inc/',
 		date: 'Jan - Apr 2023',
-		description: 'Global Illumination is developing a voxel based game called biomes.',
+		description:
+			'Global Illumination is developing a multiplayer game called biomes which has the visual style of Minecraft.',
 		logo: (
 			<Image alt='' position='absolute' src={'/images/global_illumination_logo.png'} h={14} />
 		),
@@ -51,7 +52,7 @@ const aboutData: AboutData[] = [
 		link: 'https://dreamschools.com/',
 		date: 'Sept - Dec 2021',
 		description:
-			"Dreamschools is a EdTech startup providing a SASS product for companies providing children's programs.",
+			"Dreamschools is an EdTech startup providing an all-in-one SASS product for children's daycares and summer camps.",
 		logo: <Image alt='' position='absolute' src={'/images/dreamschools_logo.png'} h={12} />,
 		path: '/about/dreamschools',
 	},
@@ -61,7 +62,7 @@ const aboutData: AboutData[] = [
 		link: 'https://sciex.com/',
 		date: 'August 2019',
 		description:
-			'Sciex is a mass spectrometry company providing both hardware and software products.',
+			'Sciex is a mass spectrometry company providing both hardware and software products to analyze chemical compounds.',
 		logo: <Image alt='' position='absolute' src={'/images/sciex_logo.png'} mt={1} w={14} />,
 		path: '/about/sciex',
 	},
@@ -71,10 +72,10 @@ const About = () => {
 	return (
 		<Box id='about'>
 			<Heading mt='64px'>About Me</Heading>
-			Hi, I&apos;m Tanson. I&apos;m a software engineer looking to create impact in all the
-			work that I do. My current interests are in game development, web3 and esoteric
-			programming languages. Apart from engineering, I enjoy exploring nature along with
-			playing sports such as basketball and volleyball.
+			👋 I&apos;m Tanson. I&apos;m a software engineer looking to learn interesting things and
+			create impact in all the work that I do. My current interests are in game development,
+			web3 and esoteric programming languages. Apart from engineering, I enjoy exploring
+			nature along with playing sports such as basketball and volleyball.
 			<Stack mt={2} spacing={6}>
 				{aboutData.map(experience => (
 					<AboutMeSection
