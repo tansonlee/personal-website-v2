@@ -9,7 +9,7 @@ interface AboutData {
 	description: string;
 	role?: string;
 	logo: React.ReactNode;
-	path: string;
+	path?: string;
 	location?: string;
 }
 
@@ -22,7 +22,15 @@ const aboutData: AboutData[] = [
 			"I'm currently in my third year of Computer Science at the University of Waterloo taking interesting courses such as Operating Systems, Networking, and Algorithms.",
 		role: 'Computer Science',
 		logo: <Image alt='' position='absolute' src={'/images/waterloo_logo.png'} h={12} />,
-		path: '/about/university-of-waterloo',
+	},
+	{
+		name: 'Bloomberg',
+		location: 'Manhattan, New York',
+		link: 'https://www.bloomberg.com/',
+		date: 'Sept - Dec 2023',
+		description:
+			'Current SWE for the Fall 2023 term working on the Fast Pricing Infra team building a distributed cache.',
+		logo: <Image alt='' position='absolute' src={'/images/bloomberg_logo.jpeg'} h={14} />,
 	},
 	{
 		name: 'Global Illumination',
@@ -78,17 +86,7 @@ const About = () => {
 			nature along with playing sports such as basketball and volleyball.
 			<Stack mt={2} spacing={6}>
 				{aboutData.map(experience => (
-					<AboutMeSection
-						key={experience.name}
-						name={experience.name}
-						location={experience.location}
-						link={experience.link}
-						description={experience.description}
-						role={experience.role}
-						icon={experience.logo}
-						date={experience.date}
-						path={experience.path}
-					/>
+					<AboutMeSection key={experience.name} experience={experience} />
 				))}
 			</Stack>
 		</Box>
@@ -96,28 +94,14 @@ const About = () => {
 };
 
 const AboutMeSection = ({
-	name,
-	location,
-	link,
-	description,
-	role,
-	icon,
-	date,
-	path,
+	experience: { name, location, link, description, role, logo, date, path },
 }: {
-	name: string;
-	location?: string;
-	link: string;
-	description: string;
-	role?: string;
-	icon: React.ReactNode;
-	date: string;
-	path: string;
+	experience: AboutData;
 }) => {
 	return (
 		<Card>
 			<>
-				{icon}
+				{logo}
 				<Box ml={16} w='100%' mr={4}>
 					<Flex
 						justify='space-between'
@@ -140,7 +124,7 @@ const AboutMeSection = ({
 					</Flex>
 					<Text>{description}</Text>
 
-					<ForwardButton href={path}>My Experience</ForwardButton>
+					{path && <ForwardButton href={path}>My Experience</ForwardButton>}
 				</Box>
 			</>
 		</Card>
