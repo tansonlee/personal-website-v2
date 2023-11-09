@@ -29,7 +29,7 @@ const aboutData: AboutData[] = [
 		link: 'https://www.bloomberg.com/',
 		date: 'Sept - Dec 2023',
 		description:
-			'Current SWE for the Fall 2023 term working on the Fast Pricing Infra team building a distributed cache.',
+			'Current SWE for the Fall 2023 term working on the Fast Pricing Infrastructure team building a graph execution engine.',
 		logo: <Image alt='' position='absolute' src={'/images/bloomberg_logo.jpeg'} h={14} />,
 	},
 	{
