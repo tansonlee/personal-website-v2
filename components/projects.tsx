@@ -42,12 +42,51 @@ const Projects = () => {
 				}}
 				gap={8}
 			>
+				<EchoCacheProjectCard />
 				<RayTracerProjectCard />
 				<NotifyrProjectCard />
 				<FooderProjectCard />
 				<PyScriptProjectCard />
 			</Grid>
 		</Box>
+	);
+};
+
+const EchoCacheProjectCard = () => {
+	return (
+		<Card>
+			<Stack w='100%'>
+				<Heading as='h3' size='lg' textAlign='center'>
+					Echo Cache
+				</Heading>
+				<HStack justify='center'>
+					<Image
+						rounded='md'
+						bgColor='white'
+						py={2}
+						px={6}
+						src='/images/echo_cache.png'
+						h='220px'
+						alt=''
+					/>
+				</HStack>
+
+				<Box>
+					<Text>
+						Echo cache is a distributed, scalable, in-memory caching solution
+						prioritizing performance and simplicity.
+					</Text>
+					<Flex>
+						<ForwardButton
+							isExternal={true}
+							href='https://github.com/tansonlee/echo-cache'
+						>
+							Code
+						</ForwardButton>
+					</Flex>
+				</Box>
+			</Stack>
+		</Card>
 	);
 };
 
