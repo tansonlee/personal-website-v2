@@ -81,9 +81,10 @@ const About = () => {
 		<Box id='about'>
 			<Heading mt='64px'>About Me</Heading>
 			👋 I&apos;m Tanson. I&apos;m a software engineer looking to learn interesting things and
-			create impact in all the work that I do. My current interests are in game development,
-			web3 and esoteric programming languages. Apart from engineering, I enjoy exploring
-			nature along with playing sports such as basketball and volleyball.
+			create impact in all the work that I do. My current interests are in distributed
+			systems, databases, game development, web3 and esoteric programming languages. Apart
+			from engineering, I enjoy exploring nature along with playing sports such as basketball
+			and volleyball.
 			<Stack mt={2} spacing={6}>
 				{aboutData.map(experience => (
 					<AboutMeSection key={experience.name} experience={experience} />
