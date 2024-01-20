@@ -9,7 +9,7 @@ const GlobalIllumination = () => {
 			date='Sept - Dec 2023'
 			imagePath='/images/bloomberg.JPG'
 		>
-			<Stack spacing={8}>
+			<Stack spacing={4}>
 				<Text>
 					At Bloomberg, I worked on the Fast Pricing Infrastructure team. Our team builds
 					the infrastructure layer for performing pricing and risk analytics on
