@@ -29,8 +29,9 @@ const aboutData: AboutData[] = [
 		link: 'https://www.bloomberg.com/',
 		date: 'Sept - Dec 2023',
 		description:
-			'Current SWE for the Fall 2023 term working on the Fast Pricing Infrastructure team building a graph execution engine.',
+			'Worked on the Fast Pricing Infrastructure team building fault tolerance and performance optimizations for a graph execution engine.',
 		logo: <Image alt='' position='absolute' src={'/images/bloomberg_logo.jpeg'} h={14} />,
+		path: '/about/bloomberg',
 	},
 	{
 		name: 'Global Illumination',
