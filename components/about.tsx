@@ -24,13 +24,21 @@ const aboutData: AboutData[] = [
 		logo: <Image alt='' position='absolute' src={'/images/waterloo_logo.png'} h={12} />,
 	},
 	{
+		name: 'Snowflake Computing',
+		location: 'San Mateo, California',
+		link: 'https://www.snowflake.com/',
+		date: 'Incoming May - Aug 2024',
+		description: 'Incoming SWE at Snowflake working on the workload optimization team.',
+		logo: <Image alt='' position='absolute' src={'/images/snowflake_logo.png'} h={12} />,
+	},
+	{
 		name: 'Bloomberg',
 		location: 'Manhattan, New York',
 		link: 'https://www.bloomberg.com/',
 		date: 'Sept - Dec 2023',
 		description:
 			'Worked on the Fast Pricing Infrastructure team building fault tolerance and performance optimizations for a graph execution engine.',
-		logo: <Image alt='' position='absolute' src={'/images/bloomberg_logo.jpeg'} h={14} />,
+		logo: <Image alt='' position='absolute' src={'/images/bloomberg_logo.jpeg'} h={12} />,
 		path: '/about/bloomberg',
 	},
 	{
@@ -83,9 +91,8 @@ const About = () => {
 			<Heading mt='64px'>About Me</Heading>
 			👋 I&apos;m Tanson. I&apos;m a software engineer looking to learn interesting things and
 			create impact in all the work that I do. My current interests are in distributed
-			systems, databases, game development, web3 and esoteric programming languages. Apart
-			from engineering, I enjoy exploring nature along with playing sports such as basketball
-			and volleyball.
+			systems, databases, and esoteric programming languages. Apart from engineering, I enjoy
+			exploring nature along with playing sports such as basketball and volleyball.
 			<Stack mt={2} spacing={6}>
 				{aboutData.map(experience => (
 					<AboutMeSection key={experience.name} experience={experience} />
