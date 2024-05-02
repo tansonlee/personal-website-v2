@@ -19,7 +19,7 @@ const aboutData: AboutData[] = [
 		link: 'https://uwaterloo.ca/',
 		date: 'Sept 2020 - Apr 2025',
 		description:
-			"I'm currently in my third year of Computer Science at the University of Waterloo taking interesting courses such as Operating Systems, Networking, and Algorithms.",
+			"I'm currently in my senior year of Computer Science at the University of Waterloo taking interesting courses such as real-time programming, operating systems, networking, and algorithms.",
 		role: 'Computer Science',
 		logo: <Image alt='' position='absolute' src={'/images/waterloo_logo.png'} h={12} />,
 	},
