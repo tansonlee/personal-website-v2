@@ -15,7 +15,6 @@ import { BsGithub } from 'react-icons/bs';
 import { ForwardButton } from './buttons';
 import { Card } from './card';
 import SocialLinkIcon from './socialLinkIcon';
-import Gist from 'react-gist';
 import { a11yLight, CodeBlock, dracula } from 'react-code-blocks';
 
 const Projects = () => {
