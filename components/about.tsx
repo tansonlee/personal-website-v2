@@ -28,7 +28,7 @@ const aboutData: AboutData[] = [
 		location: 'San Mateo, California',
 		link: 'https://www.snowflake.com/',
 		date: 'May - Aug 2024',
-		description: 'SWE at Snowflake working on the database workload optimization team.',
+		description: 'SWE at Snowflake on the SQL workload optimization team working on databse clustering.',
 		logo: <Image alt='' position='absolute' src={'/images/snowflake_logo.png'} h={12} />,
 	},
 	{
