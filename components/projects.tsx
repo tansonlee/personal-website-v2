@@ -15,6 +15,8 @@ import { BsGithub } from 'react-icons/bs';
 import { ForwardButton } from './buttons';
 import { Card } from './card';
 import SocialLinkIcon from './socialLinkIcon';
+import Gist from 'react-gist';
+import { a11yLight, CodeBlock, dracula } from 'react-code-blocks';
 
 const Projects = () => {
 	return (
@@ -139,7 +141,8 @@ const PyScriptProjectCard = () => {
 						borderRadius='md'
 					>
 						<pre>
-							{`function determine_prime {
+							<CodeBlock
+								text={`function determine_prime {
     change d_prime_result 1
     change d_prime_current 2
     if |d_prime_number < 2| {
@@ -153,6 +156,10 @@ const PyScriptProjectCard = () => {
         change d_prime_current !d_prime_current + 1!
     }
 }`}
+								language='javascript'
+								showLineNumbers={true}
+								theme={useColorModeValue(a11yLight, dracula)}
+							/>
 						</pre>
 					</Box>
 				</HStack>
@@ -201,7 +208,8 @@ const RustyRacketProjectCard = () => {
 						borderRadius='md'
 					>
 						<pre>
-							{`(include stdlib::list)
+							<CodeBlock
+								text={`(include stdlib::list)
 
 (define (main) (list-sum (list (fibonacci 1) (fibonacci 2) (fibonacci 3))))
 
@@ -215,6 +223,10 @@ const RustyRacketProjectCard = () => {
     (cond
         [(empty? lst) 0]
         [true (+ (car lst) (list-sum (cdr lst)))]))`}
+								language='racket'
+								showLineNumbers={true}
+								theme={useColorModeValue(a11yLight, dracula)}
+							/>
 						</pre>
 					</Box>
 				</HStack>
