@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from '../theme';
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<title>Tanson Lee</title>
 			</Head>
 			<Component {...pageProps} />
+			<Analytics />
 		</ChakraProvider>
 	);
 }
