@@ -89,10 +89,10 @@ const About = () => {
 	return (
 		<Box id='about'>
 			<Heading mt='64px'>About Me</Heading>
-			👋 I&apos;m Tanson. I&apos;m a software engineer looking to learn interesting things and
-			create impact in all the work that I do. My current interests are in distributed
-			systems, databases, and esoteric programming languages. Apart from engineering, I enjoy
-			exploring nature along with playing sports such as basketball and volleyball.
+			👋 I&apos;m Tanson. I&apos;m a software engineer looking to apply my knowledge to
+			interesting problems. My current interests are in distributed systems, databases, and
+			game development. I graduate in April 2025 and I&apos;m looking for new grad
+			opportunities!
 			<Stack mt={2} spacing={6}>
 				{aboutData.map(experience => (
 					<AboutMeSection key={experience.name} experience={experience} />

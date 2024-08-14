@@ -46,6 +46,7 @@ const Projects = () => {
 				<RayTracerProjectCard />
 				<NotifyrProjectCard />
 				<FooderProjectCard />
+				<RustyRacketProjectCard />
 				<PyScriptProjectCard />
 			</Grid>
 		</Box>
@@ -162,6 +163,68 @@ const PyScriptProjectCard = () => {
 						functions, loops, conditionals, I/O, and comments. I implemented a compiler
 						and assembler to translate PyScript down to a custom machine language which
 						is executed by a custom runtime simulator.
+					</Text>
+					<Flex>
+						<ForwardButton
+							isExternal={true}
+							href='https://replit.com/@TansonL/PyScript#program.ps'
+						>
+							Hosted Project
+						</ForwardButton>
+						<ForwardButton
+							isExternal={true}
+							href='https://github.com/tansonlee/PyScript#introduction'
+						>
+							Code
+						</ForwardButton>
+					</Flex>
+				</Box>
+			</Stack>
+		</Card>
+	);
+};
+
+const RustyRacketProjectCard = () => {
+	return (
+		<Card>
+			<Stack w='100%'>
+				<Heading as='h3' size='lg' textAlign='center'>
+					Rusty Racket
+				</Heading>
+				<HStack justify='center'>
+					<Box
+						overflowX='auto'
+						w='100%'
+						fontSize='xs'
+						bgColor={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+						p={2}
+						borderRadius='md'
+					>
+						<pre>
+							{`(include stdlib::list)
+
+(define (main) (list-sum (list (fibonacci 1) (fibonacci 2) (fibonacci 3))))
+
+(define (fibonacci n)
+    (cond
+        [(= n 0) 0]
+        [(= n 1) 1]
+        [true (+ (fibonacci (- n 1)) (fibonacci (- n 2)))]))
+
+(define (list-sum lst)
+    (cond
+        [(empty? lst) 0]
+        [true (+ (car lst) (list-sum (cdr lst)))]))`}
+						</pre>
+					</Box>
+				</HStack>
+
+				<Box>
+					<Text>
+						Rusty Racket is an interpreter for the Racket programming language written
+						in Rust. Racket is a purely functional language with Lisp-like syntax. The
+						interpreter is comprised of the preprocessor, tokenizer, parser, and
+						interpreter.
 					</Text>
 					<Flex>
 						<ForwardButton
