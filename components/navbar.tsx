@@ -100,6 +100,9 @@ const MobileNavbar = () => {
 						<Link fontSize='2xl' href='/#contact' onClick={onClose}>
 							Contact
 						</Link>
+						<Link fontSize='2xl' href='/resume.pdf' isExternal onClick={onClose}>
+							Resume
+						</Link>
 					</VStack>
 				</Box>
 				<Flex align='center' justify='center'>
@@ -161,6 +164,9 @@ const DesktopNavbar = () => {
 				<Link href='/#about'>About</Link>
 				<Link href='/#projects'>Projects</Link>
 				<Link href='/#contact'>Contact</Link>
+				<Link href='/resume.pdf' isExternal>
+					Resume
+				</Link>
 				<Button onClick={toggleColorMode}>
 					{colorMode === 'light' ? <MdDarkMode /> : <MdLightMode />}
 				</Button>

@@ -19,7 +19,7 @@ const aboutData: AboutData[] = [
 		link: 'https://uwaterloo.ca/',
 		date: 'Sept 2020 - Apr 2025',
 		description:
-			"I'm currently in my senior year of Computer Science at the University of Waterloo taking interesting courses such as real-time programming, operating systems, networking, and algorithms.",
+			'Graduating from Computer Science at the University of Waterloo taking interesting courses such as real-time programming, operating systems, networking, and algorithms.',
 		role: 'Computer Science',
 		logo: <Image alt='' position='absolute' src={'/images/waterloo_logo.png'} h={12} />,
 	},
@@ -28,7 +28,7 @@ const aboutData: AboutData[] = [
 		location: 'Menlo Park, California',
 		link: 'https://www.meta.com/',
 		date: 'Sept - Dec 2024',
-		description: 'Currently on the Post-impression Ads Infrastructure team.',
+		description: 'Worked on Post-impression Ads Infrastructure',
 		logo: <Image alt='' position='absolute' src={'/images/meta_logo.png'} h={8} />,
 	},
 	{
@@ -51,7 +51,7 @@ const aboutData: AboutData[] = [
 		path: '/about/bloomberg',
 	},
 	{
-		name: 'Global Illumination',
+		name: 'Global Illumination (acquired by OpenAI)',
 		location: 'Manhattan, New York',
 		link: 'https://ill.inc/',
 		date: 'Jan - Apr 2023',
@@ -63,7 +63,7 @@ const aboutData: AboutData[] = [
 		path: '/about/global-illumination',
 	},
 	{
-		name: 'Paper.xyz',
+		name: 'Paper.xyz (acquired by Thirdweb)',
 		location: 'San Francisco, California',
 		link: 'https://paper.xyz/',
 		date: 'May - Aug 2022',
@@ -100,8 +100,7 @@ const About = () => {
 			<Heading mt='64px'>About Me</Heading>
 			👋 I&apos;m Tanson. I&apos;m a software engineer looking to apply my knowledge to
 			interesting problems. My current interests are in distributed systems, databases, and
-			game development. I graduate in April 2025 and I&apos;m looking for new grad
-			opportunities!
+			game development.
 			<Stack mt={2} spacing={6}>
 				{aboutData.map(experience => (
 					<AboutMeSection key={experience.name} experience={experience} />
