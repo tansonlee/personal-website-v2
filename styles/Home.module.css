@@ -1,0 +1,235 @@
+.main {
+	max-width: 920px;
+	margin: 0 auto;
+	padding: 120px 20px 64px;
+}
+
+.accent {
+	color: var(--accent);
+}
+
+/* Header */
+
+.prompt {
+	display: flex;
+	justify-content: space-between;
+	color: var(--muted);
+}
+
+.theme {
+	border: 0;
+	background: none;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+
+.title {
+	font-size: 32px;
+	font-weight: 600;
+	letter-spacing: -0.03em;
+	margin-top: 4px;
+}
+
+.bio {
+	margin-top: 16px;
+	color: var(--muted);
+}
+
+.links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	margin-top: 20px;
+}
+
+.links a,
+.projectLinks a {
+	color: var(--fg);
+	text-decoration: none;
+}
+
+.projectLinks a {
+	color: var(--muted);
+}
+
+.theme:hover,
+.links a:hover,
+.projectLinks a:hover {
+	color: var(--accent);
+}
+
+/* Sections */
+
+.section {
+	margin-top: 64px;
+}
+
+.heading {
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+.subheading {
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--muted);
+	margin: 24px 0 4px;
+}
+
+/* Rows: date (or project links) | logo + name | description | toggle */
+
+.entry {
+	border-top: 1px dashed var(--line);
+}
+
+.row {
+	display: grid;
+	grid-template-columns: 128px 200px minmax(0, 1fr) 16px;
+	align-items: center;
+	gap: 16px;
+	padding: 8px 0;
+}
+
+button.row {
+	width: 100%;
+	border: 0;
+	background: none;
+	color: inherit;
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+}
+
+.date {
+	white-space: nowrap;
+	color: var(--faint);
+}
+
+.name {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+.logo {
+	flex: none;
+	border-radius: 4px;
+	object-fit: contain;
+}
+
+.dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--accent);
+	box-shadow: 0 0 8px var(--accent);
+}
+
+.desc {
+	color: var(--muted);
+}
+
+.toggle {
+	color: var(--faint);
+	text-align: right;
+}
+
+.projectLinks {
+	display: flex;
+	gap: 8px;
+	white-space: nowrap;
+}
+
+button.row:hover .name,
+button.row:hover .toggle,
+.open .name,
+.open .toggle {
+	color: var(--accent);
+}
+
+button.row:hover .desc,
+.open .desc {
+	color: var(--fg);
+}
+
+/* Expanding details; animating grid rows from 0fr to 1fr slides the panel open */
+
+.panel {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 220ms ease;
+}
+
+.open .panel {
+	grid-template-rows: 1fr;
+}
+
+.details {
+	overflow: hidden;
+	padding-left: 144px;
+	list-style: none;
+	color: var(--muted);
+}
+
+/* Margins, not padding, so nothing shows while the panel is collapsed */
+.details li:first-child {
+	margin-top: 4px;
+}
+
+.details li:last-child {
+	margin-bottom: 16px;
+}
+
+.details li::before {
+	content: '> ';
+	color: var(--accent);
+}
+
+.footer {
+	margin-top: 80px;
+	color: var(--muted);
+}
+
+/* Logos with a separate light-theme version */
+
+.lightOnly,
+:global([data-theme='light']) .darkOnly {
+	display: none;
+}
+
+:global([data-theme='light']) .lightOnly {
+	display: block;
+}
+
+/* Phone: the description moves under the name */
+
+@media (max-width: 640px) {
+	.row {
+		grid-template-columns: 104px minmax(0, 1fr) 16px;
+		align-items: start;
+		row-gap: 0;
+	}
+	.date,
+	.projectLinks {
+		grid-row: 1 / span 2;
+		white-space: normal;
+	}
+	.projectLinks {
+		flex-direction: column;
+		gap: 0;
+	}
+	.desc {
+		grid-column: 2;
+	}
+	.toggle {
+		grid-column: 3;
+		grid-row: 1;
+	}
+	.details {
+		padding-left: 120px;
+	}
+}

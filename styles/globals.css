@@ -4,92 +4,32 @@
 	margin: 0;
 }
 
-img {
-	object-fit: cover;
+/* The theme is set on <html> by the script in _document.tsx; dark is the default */
+:root {
+	--bg: #0b0c0e;
+	--fg: #e6e6e6;
+	--muted: #7d828a;
+	--faint: #4a4e55;
+	--line: #1c1e22;
+	--accent: #7ee787;
+	color-scheme: dark;
 }
 
-.forward-button:hover > .forward-link {
-	transform: translateX(10px);
+:root[data-theme='light'] {
+	--bg: #fbfbfa;
+	--fg: #16171a;
+	--muted: #5f646c;
+	--faint: #8a8f97;
+	--line: #e2e2df;
+	--accent: #1a7f37;
+	color-scheme: light;
 }
 
-.backward-button:hover > .backward-link {
-	transform: translateX(-10px);
-}
-
-.round {
-	position: relative;
-	width: 100px;
-	height: 100px;
-}
-
-.round > span {
-	height: 3px;
-	margin: 1px;
-	width: 30px;
-	transition: 300ms ease;
-	border-radius: 8px;
-	display: block;
-	position: absolute;
-}
-
-.round > span:first-child {
-	transform: rotate(45deg);
-	left: 25%;
-	bottom: 35%;
-}
-
-.round > span:nth-child(2) {
-	transform: rotate(-45deg);
-	left: 45%;
-	bottom: 35%;
-}
-
-.round > span:nth-child(3) {
-	transform: rotate(45deg);
-	left: 25%;
-	bottom: 54%;
-}
-
-.round > span:nth-child(4) {
-	transform: rotate(-45deg);
-	left: 45%;
-	bottom: 54%;
-}
-
-.round:hover span:nth-child(1) {
-	transform: rotate(-135deg);
-}
-
-.round:hover span:nth-child(2) {
-	transform: rotate(135deg);
-}
-
-.round:hover span:nth-child(3) {
-	transform: rotate(225deg);
-}
-
-.round:hover span:nth-child(4) {
-	transform: rotate(-225deg);
-}
-
-/* Navbar */
-.hamburger-line {
-	width: 30px;
-	height: 3px;
-	transition: all 200ms ease;
-	margin: 6px;
-}
-
-.mobile-nav-wrapper {
-	clip-path: circle(1px at 100% 0%);
-	-webkit-clip-path: circle(0 at 100% 0%);
-	pointer-events: none;
-	transition: all 500ms ease;
-}
-
-.mobile-nav-wrapper.open {
-	clip-path: circle(1200px at 100% 0%);
-	-webkit-clip-path: circle(1200px at 100% 0%);
-	transition: all 500ms ease;
-	pointer-events: all;
+body {
+	background: var(--bg);
+	color: var(--fg);
+	font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+	font-size: 14px;
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
 }
